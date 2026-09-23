@@ -3,7 +3,7 @@
 An example **Gatekeeper**: a sidecar reverse proxy that Mampok can deploy in
 front of a tool container to restrict access to authorized users. This repo
 shows one way to implement the contract Mampok expects from any
-`auth_proxy_image`; it is a reference to copy and adapt, not a dependency of
+`auth_proxy_image`. It is a reference to copy and adapt, not a dependency of
 Mampok itself.
 
 Verified compatible with [Mampok](https://github.com/loosolab/MAMPOK) v3.2.0.
@@ -13,7 +13,7 @@ Verified compatible with [Mampok](https://github.com/loosolab/MAMPOK) v3.2.0.
 This particular Gatekeeper is a small [mitmproxy](https://mitmproxy.org/)
 addon (`proxy.py`) that reverse-proxies to the main tool container and only
 forwards requests carrying a validly-signed, authorized JWT. Everything
-below is specific to this implementation; the only part Mampok actually
+below is specific to this implementation. The only part Mampok actually
 requires is described in [The Mampok contract](#the-mampok-contract).
 
 ### Request flow
@@ -39,7 +39,7 @@ regardless of their claimed username or groups.
 
 **This is a convention of this example, not part of the Mampok contract.**
 Mampok only ever writes through whatever `owner` value a Mamplan's
-`service.owner` field holds; it has no special handling for `"_public"` or
+`service.owner` field holds. It has no special handling for `"_public"` or
 any other value. A Gatekeeper you write is free to keep this rule, drop it,
 or implement a completely different authorization policy (e.g. users-only,
 ignoring groups entirely).
@@ -62,7 +62,7 @@ the mounted secret and act as a reverse proxy using only the following.
 
 | Variable       | Meaning                                              |
 | -------------- | ----------------------------------------------------- |
-| `REVERSE_PORT` | Port of the main container to reverse-proxy to        |
+| `REVERSE_PORT` | Port the main container listens on (the reverse-proxy target) |
 | `REDIRECT_HOST`| Host to redirect to after a successful token exchange  |
 | `REDIRECT_URL` | Path to redirect to after a successful token exchange  |
 | `PROJECT_ID`   | The project's ID, e.g. for naming a per-project cookie |
