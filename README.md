@@ -1,3 +1,5 @@
+[![Release](https://img.shields.io/github/v/release/loosolab/mampok-gatekeeper-example)](https://github.com/loosolab/mampok-gatekeeper-example/releases)
+
 # Mampok Gatekeeper Example
 
 An example **Gatekeeper**: a sidecar reverse proxy that Mampok can deploy in
