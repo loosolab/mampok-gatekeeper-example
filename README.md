@@ -1,4 +1,5 @@
 [![Release](https://img.shields.io/github/v/release/loosolab/mampok-gatekeeper-example)](https://github.com/loosolab/mampok-gatekeeper-example/releases)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22923724.svg)](https://doi.org/10.5281/zenodo.22923724)
 
 # Mampok Gatekeeper Example
 
