@@ -9,7 +9,7 @@ shows one way to implement the contract Mampok expects from any
 `auth_proxy_image`. It is a reference to copy and adapt, not a dependency of
 Mampok itself.
 
-Verified compatible with [Mampok](https://github.com/loosolab/MAMPOK) v3.2.0.
+Verified compatible with [Mampok](https://github.com/loosolab/MAMPOK) v3.3.0.
 
 ## What it does
 
